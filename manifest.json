@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Loliland Bonus",
+  "version": "1.0",
+
+  "description": "Забирай бонус в автоматическом режиме",
+  "icons": {
+    "48": "icons/48.png",
+    "96": "icons/96.png"
+  },
+
+  "browser_action": {
+    "default_icon": {
+      "48": "icons/48.png",
+      "96": "icons/96.png"
+    },
+    "default_title": "Whereami?",
+    "default_popup": "popup/popup.html"
+  }
+}

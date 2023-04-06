@@ -1,0 +1,157 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+*,
+*::before,
+*::after {
+  transition: 400ms all ease-in-out 50ms;
+  box-sizing: border-box;
+  backface-visibility: hidden;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 420px;
+  height: 595px;
+  background: #202022;
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+}
+h1 {
+  padding-top: 10px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  text-align: center;
+
+  color: #ffffff;
+}
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.description {
+  padding-bottom: 15px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+
+  color: #ffffff;
+}
+input[type="checkbox"] {
+  display: none;
+}
+
+/*Button is :CHECKED*/
+
+input[type="checkbox"]:checked ~ .switch {
+  background: rgba(73, 168, 68, 1);
+  box-shadow: 0 0 2px rgba(73, 168, 68, 1);
+}
+
+input[type="checkbox"]:checked ~ .switch label {
+  left: 110px;
+  transform: rotate(360deg);
+}
+
+/*shared*/
+
+.switch,
+label {
+  border-radius: 50px;
+}
+
+/*'un':checked state*/
+
+.switch {
+  height: 100px;
+  width: 200px;
+  background: #ffffff;
+  position: relative;
+  /* top: calc(50vh - 50px); */
+  /* left: calc(50vw - 100px); */
+
+  box-shadow: 0 0 2px rgba(43, 43, 43, 1);
+}
+
+label {
+  height: 80px;
+  width: 80px;
+  background: rgba(255, 255, 255, 1);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+}
+
+label::before {
+  content: "";
+  height: 60px;
+  width: 5px;
+  position: absolute;
+  top: calc(50% - 30px);
+  left: calc(50% - 2.5px);
+  transform: rotate(45deg);
+}
+
+label::after {
+  content: "";
+  height: 5px;
+  width: 60px;
+  position: absolute;
+  top: calc(50% - 2.5px);
+  left: calc(50% - 30px);
+  transform: rotate(45deg);
+}
+
+label::before,
+label::after {
+  background: rgba(43, 43, 43, 1);
+  border-radius: 5px;
+}
+
+/* pesduo class on toggle */
+
+input[type="checkbox"]:checked ~ .switch label::before {
+  height: 50px;
+  top: calc(55% - 25px);
+  left: calc(60% - 2.5px);
+  background: rgba(73, 168, 68, 1);
+}
+input[type="checkbox"]:checked ~ .switch label::after {
+  width: 20px;
+  top: calc(95% - 25px);
+  left: calc(22.5% - 2.5px);
+  background: rgba(73, 168, 68, 1);
+}
+
+.footer-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.line {
+  width: 100%;
+  border: 1px solid #676161;
+}
+.footer-info {
+  padding-left: 30px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+
+  color: #ffffff;
+}
+.footer-git-link {
+  padding-right: 30px;
+}
+.footer-git-link img {
+  width: 30px;
+  height: 30px;
+}
